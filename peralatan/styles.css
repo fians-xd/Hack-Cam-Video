@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("https://image.winudf.com/v2/image/Y29tLnJhcWlsYWFwcHMuc2NlbmVyeWhkd2FsbHBhcGVyX3NjcmVlbl8wXzE1MzgxODM2NjhfMDkx/screen-0.jpg?fakeurl=1&type=.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border: 4px solid #007bff;
+    border-radius: 9px;
+    color: #13ac05;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+#video-wrapper {
+    position: relative;
+    
+}
+
+video {
+    border: 4px solid #007bff;
+    width: 640px;
+    height: 480px;
+    background-color: #f2f2f2; /* Tambahkan warna latar belakang di sini */
+    padding: 4px; /* Menambahkan padding sesuai dengan ukuran border video */
+    border-radius: 9px;
+}
+
+#placeholder {
+    position: absolute;
+    border-radius: 9px;
+    top: 0;
+    left: 0;
+    width: 655px;
+    height: 495px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.411);
+    color: #fff;
+    pointer-events: none;
+    
+}
+
+#loading-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.fa-spinner {
+    font-size: 36px;
+    color: #007bff;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media query untuk perangkat dengan lebar layar maksimal 768px (misalnya perangkat Android dalam posisi potret) */
+@media screen and (max-width: 768px) {
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-image: url("https://image.winudf.com/v2/image/Y29tLnJhcWlsYWFwcHMuc2NlbmVyeWhkd2FsbHBhcGVyX3NjcmVlbl8wXzE1MzgxODM2NjhfMDkx/screen-0.jpg?fakeurl=1&type=.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        display: inline-block;
+        background-color: #ffffff;
+        padding: 10px 20px;
+        border: 4px solid #007bff;
+        border-radius: 9px;
+        color: #13ac05;
+        font-size: 5vw; /* Ukuran font responsif */
+        margin-bottom: 20px;
+    }
+
+    #video-wrapper {
+        position: relative;
+        max-width: 640px; /* Batas lebar video */
+        margin: 0 auto; /* Tengahkan video */
+    }
+
+    video {
+        border: 4px solid #007bff;
+        width: 90%; /* Lebar video 100% dari parentnya */
+        height: auto; /* Tinggi menyesuaikan agar proporsional */
+        background-color: #f2f2f2; /* Tambahkan warna latar belakang di sini */
+        padding: 4px; /* Menambahkan padding sesuai dengan ukuran border video */
+        border-radius: 9px;
+    }
+
+    #placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0.8%;
+        margin: auto;
+        width: 94vw; /* Lebar placeholder 94% dari parentnya */
+        height: 75vh; /* Tinggi placeholder 75% dari tinggi viewport */
+        max-width: 640px; /* Batas lebar placeholder menjadi 640px */
+        max-height: 447px; /* Batas tinggi placeholder menjadi 360px (rasio aspek 16:9) */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5vw; /* Ukuran font responsif */
+        background-color: rgba(0, 0, 0, 0.575);
+        color: #fff;
+        pointer-events: none;
+        border-radius: 9px;
+    }
+
+    #loading-wrapper {
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .fa-spinner {
+        font-size: 9vw; /* Ukuran font responsif */
+        color: #007bff;
+        animation: spin 1s linear infinite;
+    }
+}
