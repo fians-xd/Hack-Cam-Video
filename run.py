@@ -155,7 +155,7 @@ if __name__ == "__main__":
     # Cetak pesan dulu
     for charlex in pepes:
         print(charlex, end='', flush=True,)
-        time.sleep(0.05)  # Mengatur jeda menjadi 0.2 detik untuk perlahan lebih lambat
+        time.sleep(0.05)
 
     input(f"\n{m}[{kt}•{m}]{ht} Enter Untuk Jalankan Program{kt}:{n}")
     os.system("clear")
